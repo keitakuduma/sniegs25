@@ -1,0 +1,12 @@
+def lasit_teksta_failu(nosaukums):
+    try:
+        with open(nosaukums, 'r') as fails:
+            saturs = fails.read()
+            print(saturs)
+    except FileNotFoundError:
+        print("Norādītais fails nav atrasts.")
+
+# Main funkcija
+if __name__ == "__main__":
+    nosaukums = input("Lūdzu, ievadiet teksta faila nosaukumu (ar .txt paplašinājumu): ")
+    lasit_teksta_failu(nosaukums)
